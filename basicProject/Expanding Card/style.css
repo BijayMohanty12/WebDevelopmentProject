@@ -1,15 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .card_container {
     display: flex;
-    height: 100vh;
+    height: 70vh;
+    padding-top: 5%;
+    width: 100vw;
     position: fixed;
     align-items: center;
-    padding-left: 25px;
-    gap: 3%;
+    justify-content: space-around;
+    
+
+    
+    
+    overflow: hidden;
+   
+
 
 
 }
-.car{
-    position:relative;
+
+.card {
+    position: relative;
+    height: 70vh;
+    box-sizing: border-box;
+    
+    
+  
+
+
+
+
 }
 
 .card img {
@@ -22,42 +44,53 @@
     transition-property: width;
     transition-timing-function: ease-in;
     
-
+    
 
 
 }
-
 .text {
-    position: relative;
+    position: absolute;
+    top:100%;  /* Instead of top: 100% */
     left: 20px;
-    bottom: 160px;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 40px;
     font-weight: bold;
-    opacity: 0;
+    transition: all 350ms ease-out;
+}
+
+.overview {
+    position: absolute;
+    top: 100%;
+    
+    color: rgb(247, 238, 238);
+
+    padding: 3px;
+    transition: all 350ms ease-out;
+
+    
+}
+    
+    
+
+
+
+
+.card.activePanel .text {
+    top:55%;
+    
+}
+.card.activePanel .overview {
    
-
-
-
-
-}
-.overview{
-    display: none;
-}
-
-
-.card.activePanel .text{
-    opacity: 1;
+    top:70%;
     
 }
 
-.card.activePanel img{
-    width: 39vw;
+.card.activePanel img {
+    width: 40vw;
+    
     
 
-    
+
+
 
 }
-
-
-
