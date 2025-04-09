@@ -4,17 +4,19 @@
 }
 .card_container {
     display: flex;
-    height: 70vh;
-    padding-top: 5%;
-    width: 100vw;
-    position: fixed;
+    height:100vh;
+    
+    
+    
+   
     align-items: center;
     justify-content: space-around;
     
-
     
+   
+   
     
-    overflow: hidden;
+   
    
 
 
@@ -25,8 +27,12 @@
     position: relative;
     height: 70vh;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.335);
+    border-radius: 25px;
+   
+    overflow: hidden;
     
-    
+   
   
 
 
@@ -37,60 +43,83 @@
 .card img {
 
     position: relative;
+    display:block;
     width: 10vw;
     height: 70vh;
+    object-fit: cover;
     border-radius: 25px;
     transition-duration: 400ms;
     transition-property: width;
     transition-timing-function: ease-in;
-    
-    
+  
 
 
 }
 .text {
     position: absolute;
     top:100%;  /* Instead of top: 100% */
-    left: 20px;
+    left: 5%;
     color: white;
-    font-size: 40px;
+    font-size: clamp(1.6rem,2.4vw,2rem);
     font-weight: bold;
-    transition: all 350ms ease-out;
+    transition: top 350ms ease-out;
+    max-width: 90%;
+  
+    
+   
+    
 }
+
 
 .overview {
     position: absolute;
     top: 100%;
-    
+    left: 5%;
     color: rgb(247, 238, 238);
-
+    font-size:clamp(1.1rem,2vw,1.2rem);
+   
     padding: 3px;
-    transition: all 350ms ease-out;
-
+    transition: top 350ms ease-out;
+     
     
 }
     
-    
+
 
 
 
 
 .card.activePanel .text {
-    top:55%;
+    top:50%;
+    
+    
     
 }
 .card.activePanel .overview {
    
-    top:70%;
+    top:58%;
     
 }
 
 .card.activePanel img {
     width: 40vw;
+    mix-blend-mode: multiply;
     
-    
+}
+@media screen and (max-width:850px)
+{
 
-
-
+    .card.activePanel .text {
+        top:49%;
+        
+        
+        
+    }
+    .card.activePanel .overview {
+       
+        top:50;
+        font-size: .9rem;
+        
+    }
 
 }
